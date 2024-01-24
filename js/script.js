@@ -23,7 +23,7 @@ gsap.fromTo(
     duration: 1,
     y: 0,
     ease: 'elastic',
-    delay: 1,
+    delay: 3.5,
     rotation: 0,
     scale: 1,
     opacity: 1,
