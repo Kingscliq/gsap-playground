@@ -48,4 +48,5 @@ body {
 .footer {
   height: 15vh;
   background-color: purple;
+  transform: translateY(100%);
 }
