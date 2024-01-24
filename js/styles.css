@@ -1,7 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
 .nav-container {
   display: flex;
   align-items: center;
-  height: 50vh;
+  height: 15vh;
+  background-color: rgb(34, 0, 66);
 }
 
 .links {
@@ -9,13 +22,30 @@
   align-items: center;
   justify-content: space-around;
   color: white;
+  width: 100%;
+  font-size: 24px;
 }
 
 .content {
   flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  align-self: center;
+}
+
+.button button {
+  padding: 10px 30px;
+}
+
+.sidebar {
+  width: 15vw;
+  background-color: green;
 }
 
 .footer {
-  height: 50vh;
+  height: 15vh;
   background-color: purple;
 }
