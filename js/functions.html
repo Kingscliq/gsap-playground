@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        background-color: #333;
+        justify-content: center;
+      }
+      .circle-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .circle {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maniplating elements using functions</title>
+  </head>
+  <body>
+    <div class="circle-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script>
+      const getRandomColor = () => {
+        let code = '0123456789ABCDEF';
+        let color = '#';
+
+        for (let i = 0; i < 6; i++) {
+          color = color += code[Math.floor(Math.random() * code.length)];
+        }
+
+        return color;
+      };
+      gsap.fromTo(
+        '.circle',
+        {
+          duration: 2,
+          opacity: 0,
+          y: 'random(-200, 200)',
+          x: 'random(-200, 200)',
+        },
+        {
+          opacity: 1,
+          y: 'random(-200, 200)',
+          x: 'random(-200, 200)',
+          stagger: 0.25,
+          ease: 'bounce',
+        }
+      );
+    </script>
+  </body>
+</html>
